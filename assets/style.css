@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Roboto", sans-serif;
+
+  /* color  */
+  --body-bg-color: #fffbec;
+  --body-before-bg-color:#fef3c7;
+  --menu-text-color: #78350f;
+  --title-bg-color: #0f172a;
+
+  --button--border-color: #78350f;
+
+  --button-border-radius: 8px;
+
+  --header-img-bg-color:#FBBF24;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  background: var(--body-bg-color);
+  line-height: 1.4;
+  color: var(--color-dark);
+  font-size: 18px;
+  overflow: hidden;
+}
+
+/* ============= Header Start ================= */
+header {
+    position: relative;
+}
+
+.header__triangle{
+    position: absolute;
+    content: '';
+    width: 170%;
+    height: 100%;
+ background-color: var(--body-before-bg-color);
+ transform: rotate(333deg);
+ transform: rotate(334deg);
+ right: -18%;
+ top: 113%;
+ z-index: -2;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.navbar__logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--menu-text-color);
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar__menu li a {
+  color: var(--menu-text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding: 0 8px;
+  margin: 0 16px;
+}
+
+.navbar__menu li .navbar__menu--sign-btn {
+  border: 2px solid var(--button--border-color);
+  padding: 12px 28px;
+  border-radius: var(--button-border-radius);
+}
+
+.navbar__hamburger--btn {
+  display: none;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.navbar__hamburger--btn span {
+  display: block;
+  width: 18px;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 100%;
+  background-color: var(--button--border-color);
+}
+
+.navbar__hamburger--btn span::before {
+  display: block;
+  width: 13px;
+  position: absolute;
+  content: "";
+  bottom: 7px;
+  right: 0;
+  height: 2px;
+  border-radius: 100%;
+  background-color: var(--button--border-color);
+}
+
+.navbar__hamburger--btn span::after {
+  display: block;
+  width: 8px;
+  position: absolute;
+  content: "";
+  bottom: 14px;
+  right: 0;
+  height: 2px;
+  border-radius: 100%;
+  background-color: var(--button--border-color);
+}
+
+.header__content {
+  margin: 160px 0;
+}
+.header__content h2 {
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--title-bg-color);
+  margin-bottom: 32px;
+}
+
+.header__content p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.header__content--buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__content--sign-btn {
+  border: 2px solid var(--button--border-color);
+  border-radius: var(--button-border-radius);
+  padding: 16px 32px;
+  margin-right: 16px;
+  color: var(--menu-text-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header__content--media-btn {
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  color: var(--menu-text-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+.header__content--media-btn img {
+    margin-right: 8px;
+}
+
+.header__image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 80px 0;
+}
+
+.header__image::before {
+    position: absolute;
+    content: '';
+    width:372px;
+    height:362px;
+    background-color: var(--header-img-bg-color);
+    border-radius: 50px;
+    z-index: -1;
+    margin:16px;
+    right: 49px;
+    top: 33px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    padding: 16px 0;
+  }
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__hamburger--btn {
+    display: block;
+  }
+}
+/* ============= Header End ================= */
